@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /***Colors***/
+
+    /***Primary***/
+    ---red: hsl(0, 100%, 68%);
+
+    /***Neutral***/
+    ---very-dark-blue: hsl(230, 29%, 20%);
+    ---Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    ---Grayish-Blue: hsl(231, 7%, 65%);
+    ---Light-Grayish-Blue: hsl(207, 33%, 95%);
+
+    /***Font-Style***/
+
+    ---barlow-condesed: "Barlow Condensed", sans-serif;
+    ---barlow: "Barlow", sans-serif;
+}
+
+/**NavBar-Section**/
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 54px 110px;
+}
+
+.logo img {
+    display: block;
+}
+
+.drop-down {
+    display: flex;
+    font-family: var(---barlow-condesed);
+    font-weight: 700;
+}
+
+.nav-items {
+    display: flex;
+}
+
+li a {
+    text-decoration: none;
+    color: var(---very-dark-blue);
+    text-transform: uppercase;
+}
+
+li {
+    list-style-type: none;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+.btn-login a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(---Grayish-Blue);
+}
+
+
+
+.btn-login {
+    font-family: var(---Grayish-Blue);
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 40px;
+}
+
+a::after {
+    content: " ";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(---very-dark-blue);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.btn-login a::after {
+    background-color: var(---Grayish-Blue);
+}
+
+li a::after,
+.btn-login a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+li,
+a:hover::after {
+    transform: scale(1);
+}
+
+.btn-login,
+a:hover::after {
+    transform: scale(1);
+}
+
+.line {
+    background-color: var(---Grayish-Blue);
+    width: 5px;
+    height: 4px;
+    border-radius: 50%;
+    margin-top: 9px;
+}
+
+.bg {
+    width: 637px;
+    height: 343px;
+    background-color: var(---Light-Grayish-Blue);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 0px 0px 0px 60px;
+    overflow-x: hidden;
+}
+
+#menu-icon,
+#icon {
+    display: none;
+}
+
+/**main-content-section***/
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.per-heading {
+    font-family: var(---barlow-condesed);
+    color: var(---Grayish-Blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+span {
+    font-family: var(---barlow-condesed);
+    font-weight: 700;
+    color: white;
+    background-color: var(---very-dark-blue);
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.main-heading h1 {
+    font-family: var(---barlow-condesed);
+    color: var(---very-dark-blue);
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.heading-para {
+    font-family: var(---barlow-condesed);
+    color: var(---Dark-Grayish-Blue);
+    width: 12rem;
+    margin: 20px 0px;
+}
+
+.demo-btn {
+    display: flex;
+    font-family: var(---barlow-condesed);
+    align-items: center;
+    margin: 25px 0px;
+}
+
+.demo-btn p {
+    color: var(---Grayish-Blue);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#btn {
+    border: none;
+    color: white;
+    font-family: var(---barlow-condesed);
+    font-weight: 700;
+    background-color: var(---red);
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+
+#btn:hover {
+    opacity: 0.7;
+}
+
+#btn:active {
+    scale: 1.1;
+    transition: 0.3s;
+}
+
+.hero-image {
+    overflow-x: hidden;
+}
+
+.hero-image img {
+    width: 55rem;
+}
+
+@media (max-width:700px) {
+
+    #menu-icon {
+        display: block;
+    }
+
+    #icon {
+        display: block;
+    }
+
+    .nav-container {
+        margin: 30px;
+        position: relative;
+    }
+
+    .drop-down {
+        display: none;
+    }
+
+    .nav-toggle {
+        transition: 0.6s;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        padding: 26px 7px;
+        top: 51px;
+        right: 21px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 100px;
+    }
+
+    .line {
+        background-color: var(---Light-Grayish-Blue);
+        width: 396%;
+        height: 2px;
+        margin-top: 9px;
+        margin-left: -98px;
+    }
+
+    .btn-login {
+        margin-left: 0%;
+        margin-top: 10px;
+    }
+
+    li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /**main-body-section**/
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.9fr 1fr;
+    }
+
+    .text-content {
+        display: grid;
+        grid-row: 2/3;
+        margin-left: 35px;
+        margin-top: 50px;
+    }
+
+    .hero-image {
+        display: grid;
+        grid-row: 1/2;
+    }
+
+    .hero-image img {
+        width: 36rem;
+    }
+
+    .main-heading {
+        font-size: 0.7em;
+    }
+
+    .bg {
+        width: 206px;
+        height: 411px;
+    }
+}
